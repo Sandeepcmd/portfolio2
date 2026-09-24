@@ -1,0 +1,209 @@
+/* 3D Profile Card & Holographic Tilt Container */
+.profile-3d-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  width: 100%;
+}
+
+.profile-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 25px 50px -12px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(226, 232, 240, 0.7),
+    0 0 40px -10px rgba(99, 102, 241, 0.2);
+  padding: 1.25rem;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.profile-card:hover {
+  box-shadow: 
+    0 35px 70px -15px rgba(15, 23, 42, 0.18),
+    0 0 0 1px rgba(99, 102, 241, 0.4),
+    0 0 60px -10px rgba(99, 102, 241, 0.3);
+}
+
+/* Photo Container */
+.photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: calc(var(--radius-xl) - 8px);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  transform: translateZ(20px);
+  background: #e2e8f0;
+}
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.profile-card:hover .photo-img {
+  transform: scale(1.04);
+}
+
+/* Glare & Reflection Sheen */
+.card-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  mix-blend-mode: overlay;
+}
+
+.profile-card:hover .card-glare {
+  opacity: 1;
+}
+
+/* Floating 3D Badges */
+.floating-badge {
+  position: absolute;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  padding: 0.65rem 1.1rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.12), 0 0 1px 1px rgba(99, 102, 241, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
+}
+
+/* Badge 1: Top Right - Experience */
+.badge-experience {
+  top: 10%;
+  right: -8%;
+  transform: translateZ(50px);
+}
+
+/* Badge 2: Bottom Left - LeetCode / Coding Streak */
+.badge-streak {
+  bottom: 8%;
+  left: -8%;
+  transform: translateZ(60px);
+}
+
+@media (max-width: 600px) {
+  .badge-experience {
+    right: 0%;
+    top: 5%;
+  }
+  .badge-streak {
+    left: 0%;
+    bottom: 4%;
+  }
+}
+
+.badge-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.badge-experience .badge-icon-box {
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--accent-primary);
+}
+
+.badge-streak .badge-icon-box {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--accent-amber);
+}
+
+.badge-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-info .badge-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.badge-info .badge-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Orbiting Tech Chips */
+.orbiting-tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  transform: translateZ(30px);
+}
+
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: all var(--transition-fast);
+}
+
+.tech-chip:hover {
+  transform: translateY(-2px) scale(1.05);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: #ffffff;
+}
+
+/* Subtle background ring around profile */
+.profile-ambient-glow {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(236, 72, 153, 0.1) 40%, transparent 70%);
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
+}

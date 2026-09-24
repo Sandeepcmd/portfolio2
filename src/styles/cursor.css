@@ -1,0 +1,55 @@
+/* Custom 3D Glowing Cursor */
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease, transform 0.05s ease;
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.8);
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(99, 102, 241, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              height 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.25s ease, 
+              border-color 0.25s ease;
+  backdrop-filter: blur(1px);
+}
+
+.custom-cursor-ring.cursor-hover {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(236, 72, 153, 0.7);
+  background-color: rgba(99, 102, 241, 0.08);
+}
+
+.custom-cursor-ring.cursor-active {
+  width: 28px;
+  height: 28px;
+  border-color: var(--accent-primary);
+  background-color: rgba(79, 70, 229, 0.2);
+}
+
+/* Hide on touch devices */
+@media (pointer: coarse) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}

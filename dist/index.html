@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandeep — Software Engineer & Distributed Systems</title>
+  <meta name="description" content="Portfolio of Sandeep — Software Engineer specializing in High-Throughput Microservices, Sub-second RAG, Real-Time Telemetry & Distributed Systems.">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <script type="module" crossorigin src="/assets/index-B9DbaHCu.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DfXKm7hx.css">
+</head>
+<body>
+  <!-- Custom Magnetic Cursor Elements -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- Three.js 3D Floating Geometry Background Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Ambient Light Mesh Layer -->
+  <div class="bg-mesh-overlay"></div>
+
+  <!-- Toast Notification -->
+  <div id="global-toast" class="global-toast">Copied to clipboard!</div>
+
+  <!-- Main App Wrapper -->
+  <div class="app-container">
+    
+    <!-- Floating Glass Header Navbar -->
+    <header class="site-header">
+      <nav class="nav-container">
+        <a href="#hero" class="nav-brand">
+          <img src="/assets/profile-CfkmzXtk.jpeg" alt="Sandeep" class="brand-avatar">
+          <span class="brand-text">Sandeep<span>.dev</span></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#achievements" class="nav-link">Honors</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="status-badge" title="Open to high-impact software engineering roles">
+            <span class="status-beacon"></span>
+            <span>Available for Hire</span>
+          </div>
+
+          <button id="sound-toggle-btn" class="sound-toggle-btn" title="Toggle Sound Synthesis" aria-label="Toggle Sound">
+            <i data-lucide="volume-2" style="width: 18px; height: 18px;"></i>
+          </button>
+
+          <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Let's Talk</a>
+
+          <button id="mobile-menu-open" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+            <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+      <div class="mobile-drawer-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <div style="font-weight: 700; font-size: 1.1rem;">Menu</div>
+          <button id="mobile-menu-close" style="background: none; border: none; cursor: pointer; color: var(--text-primary);">
+            <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+          </button>
+        </div>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#experience" class="mobile-nav-link">Experience</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#achievements" class="mobile-nav-link">Achievements</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="content-wrapper">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Bio & Hero Pitch -->
+          <div class="hero-content">
+            <div class="hero-pill-badge">
+              <span style="color: var(--accent-emerald);">●</span>
+              <span>Software Engineer & Distributed Systems Craftsman</span>
+            </div>
+
+            <h1 class="hero-title">
+              Architecting <span class="title-accent">High-Throughput</span> Backend Systems & AI.
+            </h1>
+
+            <p class="hero-subtitle">
+              Hi, I'm <strong>Sandeep</strong>. I engineer scalable microservices with <strong>NestJS, Redis, & Docker</strong>, orchestrate <strong>sub-second RAG & Voice AI</strong>, and build resilient distributed architectures processing <strong>50,000+ daily transactions</strong>.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Architectures</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </a>
+
+              <a href="#contact" class="btn btn-secondary">
+                <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+                <span>Get In Touch</span>
+              </a>
+
+              <button class="btn btn-glass" data-copy="sandeep22bcs11548@gmail.com" title="Click to copy email">
+                <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                <span>Copy Email</span>
+              </button>
+            </div>
+
+            <!-- Social Links Strip -->
+            <div class="hero-socials">
+              <a href="https://github.com/Sandeepcmd" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+                <i data-lucide="github" style="width: 18px; height: 18px;"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/sandeep-584682373" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+                <i data-lucide="linkedin" style="width: 18px; height: 18px;"></i>
+              </a>
+              <a href="https://leetcode.com/u/sandeep1590/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LeetCode Profile">
+                <i data-lucide="code-2" style="width: 18px; height: 18px;"></i>
+              </a>
+              <a href="mailto:sandeep22bcs11548@gmail.com" class="social-icon-btn" title="Direct Email">
+                <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+              </a>
+            </div>
+
+            <!-- Quick Telemetry Numbers -->
+            <div class="hero-stats-strip">
+              <div class="stat-item">
+                <div class="stat-number">
+                  <span data-counter="50" data-suffix="K+">50K+</span>
+                </div>
+                <div class="stat-label">Daily CPaaS Messaging</div>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-number">
+                  <span data-counter="800" data-suffix="+">800+</span>
+                </div>
+                <div class="stat-label">LeetCode & DSA Solved</div>
+              </div>
+
+              <div class="stat-item">
+                <div class="stat-number">
+                  <span data-counter="365" data-suffix=" Days">365 Days</span>
+                </div>
+                <div class="stat-label">Active Coding Streak</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 3D Holographic Portrait Tilt Card -->
+          <div class="profile-3d-wrapper">
+            <div class="profile-card" data-tilt data-tilt-max="12">
+              <div class="card-glare"></div>
+              <div class="profile-ambient-glow"></div>
+
+              <!-- Top Right Floating 3D Badge -->
+              <div class="floating-badge badge-experience">
+                <div class="badge-icon-box">
+                  <i data-lucide="briefcase" style="width: 18px; height: 18px;"></i>
+                </div>
+                <div class="badge-info">
+                  <span class="badge-title">Software Engineer</span>
+                  <span class="badge-desc">WebArya Tech Pvt Ltd</span>
+                </div>
+              </div>
+
+              <!-- Portrait Frame -->
+              <div class="photo-frame">
+                <img src="/assets/profile-CfkmzXtk.jpeg" alt="Sandeep — Software Engineer" class="photo-img">
+              </div>
+
+              <!-- Bottom Left Floating 3D Badge -->
+              <div class="floating-badge badge-streak">
+                <div class="badge-icon-box">
+                  <i data-lucide="flame" style="width: 18px; height: 18px;"></i>
+                </div>
+                <div class="badge-info">
+                  <span class="badge-title">Top 2% Globally</span>
+                  <span class="badge-desc">365-Day LeetCode Streak</span>
+                </div>
+              </div>
+
+              <!-- Orbiting Tech Pills below photo -->
+              <div class="orbiting-tech-pills">
+                <span class="tech-chip">NestJS</span>
+                <span class="tech-chip">Docker</span>
+                <span class="tech-chip">Redis</span>
+                <span class="tech-chip">Groq AI</span>
+                <span class="tech-chip">Prisma</span>
+                <span class="tech-chip">AWS</span>
+                <span class="tech-chip">React</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About & Recruiter Sandbox Section -->
+    <section id="about" class="about-section">
+      <div class="content-wrapper">
+        <div class="section-tag">
+          <span class="dot"></span>
+          <span>Core Engineering Focus</span>
+        </div>
+
+        <h2 class="section-heading">
+          Engineering with <span class="highlight">Architectural Precision</span> & Speed.
+        </h2>
+
+        <div class="about-grid">
+          <!-- Text and Pillars -->
+          <div class="about-text-column">
+            <p class="about-bio-p">
+              I am a <strong>Software Engineer</strong> based in India with a strong background in distributed systems, real-time event streaming, and modern AI/LLM tooling. I bridge high-throughput backend architecture with elegant developer ergonomics.
+            </p>
+
+            <p class="about-bio-p">
+              Whether architecting GPS bus telemetry serving <strong>500+ live sessions</strong> at sub-2-second latency, scaling CPaaS messaging microservices handling <strong>50,000+ daily events</strong>, or engineering <strong>sub-800ms multimodal voice pipelines</strong>, I optimize for resilience, clean abstractions, and measurable impact.
+            </p>
+
+            <div class="engineering-pillars">
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <i data-lucide="cpu" style="width: 22px; height: 22px;"></i>
+                </div>
+                <div class="pillar-title">Distributed Systems</div>
+                <div class="pillar-desc">Event-driven pipelines with Redis, Socket.io, RabbitMQ, and microservices clustering.</div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <i data-lucide="sparkles" style="width: 22px; height: 22px;"></i>
+                </div>
+                <div class="pillar-title">RAG & Multimodal AI</div>
+                <div class="pillar-desc">Vector retrieval with Pinecone, OpenAI embeddings, Whisper STT, and Groq ultra-fast inference.</div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <i data-lucide="shield-check" style="width: 22px; height: 22px;"></i>
+                </div>
+                <div class="pillar-title">Enterprise Security</div>
+                <div class="pillar-desc">Dual-tier JWT & API keys, RBAC guards, token-bucket rate limiting, and IP whitelisting.</div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <i data-lucide="terminal" style="width: 22px; height: 22px;"></i>
+                </div>
+                <div class="pillar-title">Algorithmic Mastery</div>
+                <div class="pillar-desc">800+ complex problems solved with deep intuition in dynamic programming and graph theory.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recruiter Interactive Terminal Sandbox -->
+          <div>
+            <div class="terminal-wrapper" data-tilt data-tilt-max="5">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="t-dot t-red"></span>
+                  <span class="t-dot t-yellow"></span>
+                  <span class="t-dot t-green"></span>
+                </div>
+                <div class="terminal-title">
+                  <i data-lucide="terminal" style="width: 14px; height: 14px;"></i>
+                  <span>sandeep@sandbox: ~ (interactive-cli)</span>
+                </div>
+                <div class="terminal-actions">
+                  <button id="terminal-clear-btn" class="terminal-chip">Clear</button>
+                </div>
+              </div>
+
+              <div id="terminal-body" class="terminal-body">
+                <div class="terminal-output">
+                  <div class="res-dim">System initialized: Node.js v24.11 / SandeepOS v2.4</div>
+                  <div>Welcome, recruiter! Type <span class="res-highlight">help</span> or click quick commands below to interrogate my specs.</div>
+                </div>
+              </div>
+
+              <div class="terminal-input-row" style="padding: 0.6rem 1.25rem; background: #0c1222; border-top: 1px solid rgba(255, 255, 255, 0.06);">
+                <span>$</span>
+                <input id="terminal-input" class="terminal-input" type="text" placeholder="Type 'help', 'hire', 'projects', 'stats'..." autocomplete="off">
+              </div>
+
+              <div class="quick-commands-bar">
+                <span style="font-size: 0.7rem; color: #64748b;">Quick Run:</span>
+                <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+                <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+                <button class="quick-cmd-btn" data-cmd="stats">stats</button>
+                <button class="quick-cmd-btn" data-cmd="hire">hire ✨</button>
+                <button class="quick-cmd-btn" data-cmd="contact">contact</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Work Experience Section -->
+    <section id="experience" class="experience-section">
+      <div class="content-wrapper">
+        <div class="section-tag">
+          <span class="dot"></span>
+          <span>Proven Track Record</span>
+        </div>
+
+        <h2 class="section-heading">
+          Engineering Impact at <span class="highlight">Production Scale</span>.
+        </h2>
+        <p class="section-description">
+          Demonstrated capability deploying high-availability backends, monitoring distributed clusters, and securing cloud APIs against unauthorized workloads.
+        </p>
+
+        <div class="experience-timeline">
+          
+          <!-- Experience Card: WebArya Tech -->
+          <div class="timeline-card" data-tilt data-tilt-max="4">
+            <div class="timeline-card-header">
+              <div class="company-role-group">
+                <h3 class="role-title">Software Engineer</h3>
+                <div class="company-name">
+                  <i data-lucide="building-2" style="width: 18px; height: 18px;"></i>
+                  <span>WebArya Tech Private Limited</span>
+                  <span class="company-location">• Bangalore, India</span>
+                </div>
+              </div>
+              <span class="tenure-pill">Jan 2026 — Present</span>
+            </div>
+
+            <ul class="experience-bullets">
+              <li class="bullet-item">
+                <strong>Multi-Tenant SaaS Backend (<a href="https://smartschool.webarya.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">smartschool.webarya.com ↗</a>):</strong> Spearheaded backend development for a multi-tenant School Management SaaS using NestJS, React, Prisma, and PostgreSQL, deploying role-based access control (RBAC) across 5 user tiers and 10+ modules to decrease administrative workload by 30%.
+              </li>
+              <li class="bullet-item">
+                <strong>Live Geolocation & Telemetry:</strong> Architected an event-driven tracking system using Socket.io and Redis for live GPS bus telemetry, maintaining sub-2-second alert latency across 500+ concurrent active sessions for instant route, fee, and attendance updates.
+              </li>
+              <li class="bullet-item">
+                <strong>High-Volume CPaaS Engine (<a href="https://omni.mobiroute.in" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">omni.mobiroute.in ↗</a>):</strong> Scaled high-throughput microservices for a cloud CPaaS messaging platform, processing 50,000+ daily SMS and WhatsApp business communications at a 99.2% delivery success rate under strict DLT regulatory compliance.
+              </li>
+              <li class="bullet-item">
+                <strong>Dual-Tier Security Guardrails:</strong> Fortified application security by implementing dual-tier authentication (JWT and API keys) with IP whitelisting, endpoint guards, and token-bucket rate limiting (20–60 req/min), cutting unauthorized access attempts by 40%.
+              </li>
+              <li class="bullet-item">
+                <strong>Dockerized Cluster Observability:</strong> Automated infrastructure monitoring via a Dockerized VPS health daemon tracking CPU, memory, and disk metrics across 10+ cloud servers, lowering incident resolution time by 50% through threshold-based alerts.
+              </li>
+            </ul>
+
+            <!-- Impact Metrics Strip -->
+            <div class="experience-metrics-grid">
+              <div class="exp-metric-box">
+                <span class="exp-metric-val">99.2%</span>
+                <span class="exp-metric-lbl">CPaaS Delivery Rate</span>
+              </div>
+              <div class="exp-metric-box">
+                <span class="exp-metric-val">&lt;2s</span>
+                <span class="exp-metric-lbl">GPS Telemetry Latency</span>
+              </div>
+              <div class="exp-metric-box">
+                <span class="exp-metric-val">500+</span>
+                <span class="exp-metric-lbl">Concurrent Telemetry Sessions</span>
+              </div>
+              <div class="exp-metric-box">
+                <span class="exp-metric-val">50%</span>
+                <span class="exp-metric-lbl">Incident MTTR Reduction</span>
+              </div>
+            </div>
+
+            <div class="experience-tech-stack">
+              <span class="stack-tag">NestJS</span>
+              <span class="stack-tag">TypeScript</span>
+              <span class="stack-tag">Prisma ORM</span>
+              <span class="stack-tag">PostgreSQL</span>
+              <span class="stack-tag">Redis</span>
+              <span class="stack-tag">Socket.io</span>
+              <span class="stack-tag">Docker</span>
+              <span class="stack-tag">RabbitMQ</span>
+              <span class="stack-tag">Swagger/OpenAPI</span>
+              <span class="stack-tag">Microservices</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Flagship Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="content-wrapper">
+        <div class="section-tag">
+          <span class="dot"></span>
+          <span>Flagship Systems</span>
+        </div>
+
+        <h2 class="section-heading">
+          Featured <span class="highlight">Architectures & Live Builds</span>.
+        </h2>
+        <p class="section-description">
+          Battle-tested production systems serving tens of thousands of real users, alongside generative AI vector search and low-latency audio pipelines.
+        </p>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: MobiRoute Omnichannel CPaaS (Live Production) -->
+          <div class="project-card-3d" data-tilt data-tilt-max="8">
+            <div class="project-card-inner">
+              <div class="project-top-meta">
+                <div class="project-badges-row">
+                  <span class="project-category-badge">Cloud CPaaS</span>
+                  <a href="https://omni.mobiroute.in" target="_blank" rel="noopener noreferrer" class="live-prod-badge" title="Live in Production">
+                    <span class="live-prod-dot"></span>
+                    <span>Live Production</span>
+                  </a>
+                </div>
+                <div class="project-links">
+                  <a href="https://omni.mobiroute.in" target="_blank" rel="noopener noreferrer" class="btn-live-preview" title="Visit Live App">
+                    <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                    <span>Live App</span>
+                  </a>
+                  <a href="https://github.com/Sandeepcmd" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Source / Architecture">
+                    <i data-lucide="github" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">MobiRoute — Omnichannel Messaging (CPaaS) Platform</h3>
+              <p class="project-desc">
+                High-throughput enterprise communications infrastructure dispatching business SMS and WhatsApp messages with DLT compliance and real-time delivery telemetry.
+              </p>
+
+              <div class="project-stat-badge">
+                <i data-lucide="zap" style="width: 14px; height: 14px;"></i>
+                <span>50,000+ daily messages at 99.2% success</span>
+              </div>
+
+              <ul class="project-highlights-list">
+                <li class="highlight-row">Production host at <a href="https://omni.mobiroute.in" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); font-weight: 600;">omni.mobiroute.in</a> managing high-volume enterprise traffic.</li>
+                <li class="highlight-row">Token-bucket rate limiting (20–60 req/min) with dual-tier API authentication and endpoint guards.</li>
+                <li class="highlight-row">Engineered event queues with <strong>RabbitMQ & Redis</strong> to maintain flawless zero-drop message throughput.</li>
+              </ul>
+
+              <div class="project-footer">
+                <div class="project-tech-tags">
+                  <span class="p-tag">Node.js</span>
+                  <span class="p-tag">NestJS</span>
+                  <span class="p-tag">Redis</span>
+                  <span class="p-tag">RabbitMQ</span>
+                  <span class="p-tag">PostgreSQL</span>
+                  <span class="p-tag">Docker</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Smart School Cloud (Live Production) -->
+          <div class="project-card-3d" data-tilt data-tilt-max="8">
+            <div class="project-card-inner">
+              <div class="project-top-meta">
+                <div class="project-badges-row">
+                  <span class="project-category-badge">EdTech SaaS</span>
+                  <a href="https://smartschool.webarya.com" target="_blank" rel="noopener noreferrer" class="live-prod-badge" title="Live in Production">
+                    <span class="live-prod-dot"></span>
+                    <span>Live Production</span>
+                  </a>
+                </div>
+                <div class="project-links">
+                  <a href="https://smartschool.webarya.com" target="_blank" rel="noopener noreferrer" class="btn-live-preview" title="Visit Live Platform">
+                    <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                    <span>Live App</span>
+                  </a>
+                  <a href="https://github.com/Sandeepcmd" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Source Code">
+                    <i data-lucide="github" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">SmartSchool — Multi-Tenant Cloud Ecosystem</h3>
+              <p class="project-desc">
+                High-concurrency educational SaaS platform managing real-time GPS bus geolocation streaming, attendance, fee collection, and 5-tier role-based access control.
+              </p>
+
+              <div class="project-stat-badge">
+                <i data-lucide="layers" style="width: 14px; height: 14px;"></i>
+                <span>500+ active GPS sessions &lt;2s latency</span>
+              </div>
+
+              <ul class="project-highlights-list">
+                <li class="highlight-row">Live in production at <a href="https://smartschool.webarya.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); font-weight: 600;">smartschool.webarya.com</a> across 10+ operational modules.</li>
+                <li class="highlight-row">Real-time GPS vehicle tracking powered by <strong>Socket.io & Redis pub/sub</strong> streaming instant route updates.</li>
+                <li class="highlight-row">Dockerized cluster daemon monitoring CPU, memory, and disk health across 10+ VPS instances.</li>
+              </ul>
+
+              <div class="project-footer">
+                <div class="project-tech-tags">
+                  <span class="p-tag">NestJS</span>
+                  <span class="p-tag">React</span>
+                  <span class="p-tag">Prisma ORM</span>
+                  <span class="p-tag">PostgreSQL</span>
+                  <span class="p-tag">Socket.io</span>
+                  <span class="p-tag">Redis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Company Brain (RAG Engine) -->
+          <div class="project-card-3d" data-tilt data-tilt-max="8">
+            <div class="project-card-inner">
+              <div class="project-top-meta">
+                <div class="project-badges-row">
+                  <span class="project-category-badge">AI / Vector Retrieval</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Sandeepcmd" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Source Code">
+                    <i data-lucide="github" style="width: 16px; height: 16px;"></i>
+                  </a>
+                  <a href="https://github.com/Sandeepcmd" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Architecture Demo">
+                    <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">Enterprise Knowledge Retrieval Engine (Company Brain)</h3>
+              <p class="project-desc">
+                High-performance retrieval-augmented generation (RAG) platform indexing thousands of internal documents with sub-second semantic search.
+              </p>
+
+              <div class="project-stat-badge">
+                <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+                <span>40% document search latency reduction</span>
+              </div>
+
+              <ul class="project-highlights-list">
+                <li class="highlight-row">Designed a RAG pipeline utilizing <strong>OpenAI text embeddings & Pinecone vector database</strong> across 1,000+ files.</li>
+                <li class="highlight-row">Integrated <strong>Whisper speech-to-text with GPT-4</strong> summarization models for vocal natural language inquiries.</li>
+                <li class="highlight-row">Containerized microservices with <strong>Docker & GitHub Actions CI/CD</strong>, speeding release cycles by 35%.</li>
+              </ul>
+
+              <div class="project-footer">
+                <div class="project-tech-tags">
+                  <span class="p-tag">MERN</span>
+                  <span class="p-tag">Pinecone</span>
+                  <span class="p-tag">OpenAI</span>
+                  <span class="p-tag">Whisper STT</span>
+                  <span class="p-tag">Docker</span>
+                  <span class="p-tag">AWS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Dracula Multimodal Voice Assistant -->
+          <div class="project-card-3d" data-tilt data-tilt-max="8">
+            <div class="project-card-inner">
+              <div class="project-top-meta">
+                <div class="project-badges-row">
+                  <span class="project-category-badge">Real-Time Voice AI</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/Sandeepcmd" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Source Code">
+                    <i data-lucide="github" style="width: 16px; height: 16px;"></i>
+                  </a>
+                  <a href="https://github.com/Sandeepcmd" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Architecture Demo">
+                    <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">Dracula — Real-Time Multimodal Voice Assistant</h3>
+              <p class="project-desc">
+                Ultra-low latency conversational voice assistant powered by Groq LLM inference, vision analysis, and Android ADB device automation.
+              </p>
+
+              <div class="project-stat-badge">
+                <i data-lucide="clock" style="width: 14px; height: 14px;"></i>
+                <span>Sub-800ms end-to-end voice loop</span>
+              </div>
+
+              <ul class="project-highlights-list">
+                <li class="highlight-row">Built on <strong>Groq LLM (Llama 3.3 70B & Vision)</strong> orchestrating 35+ device tools, vision, and system actions.</li>
+                <li class="highlight-row">Benchmarked audio pipeline combining <strong>OpenWakeWord, Faster-Whisper with VAD, and Neural Piper TTS</strong>.</li>
+                <li class="highlight-row">Constructed an <strong>Android bridge via ADB</strong> to dispatch WhatsApp, SMS, and cellular calls via vocal intent.</li>
+              </ul>
+
+              <div class="project-footer">
+                <div class="project-tech-tags">
+                  <span class="p-tag">Python</span>
+                  <span class="p-tag">Groq Llama 3.3</span>
+                  <span class="p-tag">FastAPI</span>
+                  <span class="p-tag">WebSockets</span>
+                  <span class="p-tag">Piper TTS</span>
+                  <span class="p-tag">ADB Bridge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Technical Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="content-wrapper">
+        <div class="section-tag">
+          <span class="dot"></span>
+          <span>Technical Arsenal</span>
+        </div>
+
+        <h2 class="section-heading">
+          Languages, Runtimes & <span class="highlight">Tooling</span>.
+        </h2>
+        <p class="section-description">
+          A battle-tested stack spanning systems backend, generative AI, cloud infrastructure, and modern databases.
+        </p>
+
+        <div class="skills-category-grid">
+          
+          <!-- Category 1: Backend Systems -->
+          <div class="skill-category-card">
+            <div class="category-card-header">
+              <div class="cat-icon-box">
+                <i data-lucide="server" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h3 class="cat-title">Backend & Microservices</h3>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill featured">NestJS</span>
+              <span class="skill-pill featured">Node.js</span>
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">Express.js</span>
+              <span class="skill-pill">FastAPI</span>
+              <span class="skill-pill">Spring Boot</span>
+              <span class="skill-pill">REST APIs</span>
+              <span class="skill-pill">GraphQL</span>
+              <span class="skill-pill">WebSockets</span>
+              <span class="skill-pill">Microservices</span>
+            </div>
+          </div>
+
+          <!-- Category 2: AI & LLM Engineering -->
+          <div class="skill-category-card">
+            <div class="category-card-header">
+              <div class="cat-icon-box">
+                <i data-lucide="bot" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h3 class="cat-title">AI & Generative RAG</h3>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill featured">RAG Pipelines</span>
+              <span class="skill-pill featured">Groq Llama 3.3</span>
+              <span class="skill-pill">OpenAI API</span>
+              <span class="skill-pill">Pinecone Vector DB</span>
+              <span class="skill-pill">Whisper STT</span>
+              <span class="skill-pill">Vector Embeddings</span>
+              <span class="skill-pill">LangChain</span>
+              <span class="skill-pill">Hugging Face</span>
+              <span class="skill-pill">Ollama</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Databases & Caching -->
+          <div class="skill-category-card">
+            <div class="category-card-header">
+              <div class="cat-icon-box">
+                <i data-lucide="database" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h3 class="cat-title">Databases & Caching</h3>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill featured">PostgreSQL</span>
+              <span class="skill-pill featured">Redis</span>
+              <span class="skill-pill">Prisma ORM</span>
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">TypeORM</span>
+              <span class="skill-pill">MinIO</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Cloud & DevOps -->
+          <div class="skill-category-card">
+            <div class="category-card-header">
+              <div class="cat-icon-box">
+                <i data-lucide="cloud" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h3 class="cat-title">Cloud & DevOps</h3>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill featured">Docker</span>
+              <span class="skill-pill featured">AWS (EC2, S3)</span>
+              <span class="skill-pill">GitHub Actions CI/CD</span>
+              <span class="skill-pill">Grafana Observability</span>
+              <span class="skill-pill">Linux Admin</span>
+              <span class="skill-pill">Shell Scripting</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Frontend Experience -->
+          <div class="skill-category-card">
+            <div class="category-card-header">
+              <div class="cat-icon-box">
+                <i data-lucide="layout" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h3 class="cat-title">Modern Frontend</h3>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill featured">React.js</span>
+              <span class="skill-pill">Next.js</span>
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">Tailwind CSS</span>
+              <span class="skill-pill">GSAP</span>
+              <span class="skill-pill">Three.js</span>
+              <span class="skill-pill">HTML5 / CSS3</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Languages & Messaging -->
+          <div class="skill-category-card">
+            <div class="category-card-header">
+              <div class="cat-icon-box">
+                <i data-lucide="code" style="width: 20px; height: 20px;"></i>
+              </div>
+              <h3 class="cat-title">Languages & Messaging</h3>
+            </div>
+            <div class="skills-pills-wrap">
+              <span class="skill-pill featured">Python</span>
+              <span class="skill-pill featured">TypeScript</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">RabbitMQ</span>
+              <span class="skill-pill">Socket.io</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Honors, Certifications & Achievements Section -->
+    <section id="achievements" class="achievements-section">
+      <div class="content-wrapper">
+        <div class="section-tag">
+          <span class="dot"></span>
+          <span>Verified Milestones</span>
+        </div>
+
+        <h2 class="section-heading">
+          Honors, <span class="highlight">Certifications</span> & Grit.
+        </h2>
+        <p class="section-description">
+          National competitive rankings, academic excellence, and consistent daily algorithmic rigor.
+        </p>
+
+        <div class="achievements-grid">
+          
+          <!-- Card 1: NPTEL Cloud Computing Topper -->
+          <div class="achievement-card">
+            <div class="achieve-badge-icon">
+              <i data-lucide="award" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 class="achieve-title">NPTEL Cloud Computing — Elite + Topper (Top 1%)</h3>
+            <div class="achieve-issuer">IIT Kharagpur • 2024</div>
+            <p class="achieve-desc">
+              Awarded top 1% nationwide ranking for virtualization, cloud architectures, distributed resource allocation, and cloud storage systems.
+            </p>
+            <span class="achieve-tag">Ranked Top 1% Nationwide</span>
+          </div>
+
+          <!-- Card 2: NPTEL IoT, Edge & ML -->
+          <div class="achievement-card">
+            <div class="achieve-badge-icon">
+              <i data-lucide="check-circle-2" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 class="achieve-title">NPTEL Foundation of Cloud, IoT, Edge & ML — Elite</h3>
+            <div class="achieve-issuer">IIT Kanpur • 2025</div>
+            <p class="achieve-desc">
+              Comprehensive certification in distributed sensor protocols, edge computing compute offloading, and machine learning pipelines.
+            </p>
+            <span class="achieve-tag">Elite Certification</span>
+          </div>
+
+          <!-- Card 3: 800+ Algorithmic Problems Solved -->
+          <div class="achievement-card">
+            <div class="achieve-badge-icon">
+              <i data-lucide="trophy" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 class="achieve-title">800+ Algorithmic Problems Solved</h3>
+            <div class="achieve-issuer">LeetCode • CodeChef • HackerRank</div>
+            <p class="achieve-desc">
+              Deep mastery of dynamic programming, graph traversal, trie structures, and system design optimization patterns.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 0.5rem;">
+              <span class="achieve-tag">800+ Problems</span>
+              <a href="https://leetcode.com/u/sandeep1590/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); font-size: 0.8rem; font-weight: 600; text-decoration: underline; display: inline-flex; align-items: center; gap: 0.2rem;">
+                <span>LeetCode Profile</span>
+                <i data-lucide="external-link" style="width: 12px; height: 12px;"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: 365-Day Active Coding Streak -->
+          <div class="achievement-card">
+            <div class="achieve-badge-icon">
+              <i data-lucide="flame" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 class="achieve-title">365-Day Active Coding Streak</h3>
+            <div class="achieve-issuer">LeetCode (Top 2% Consistent Contributors)</div>
+            <p class="achieve-desc">
+              Demonstrating relentless daily problem-solving dedication and persistence across 365 consecutive days.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 0.5rem;">
+              <span class="achieve-tag">Top 2% Globally</span>
+              <a href="https://leetcode.com/u/sandeep1590/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); font-size: 0.8rem; font-weight: 600; text-decoration: underline; display: inline-flex; align-items: center; gap: 0.2rem;">
+                <span>Verify Streak</span>
+                <i data-lucide="external-link" style="width: 12px; height: 12px;"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Interactive Celebration Trigger Banner -->
+        <div class="celebrate-banner">
+          <div>
+            <div class="celebrate-text">Want to celebrate milestones? 🎉</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Click to fire celebratory confetti particles!</div>
+          </div>
+          <button id="celebrate-achievements-btn" class="btn btn-primary">
+            <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i>
+            <span>Celebrate Achievements</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="content-wrapper">
+        <div class="section-tag">
+          <span class="dot"></span>
+          <span>Initiate Communication</span>
+        </div>
+
+        <h2 class="section-heading">
+          Let's Build Something <span class="highlight">Remarkable</span>.
+        </h2>
+        <p class="section-description">
+          Whether you're looking for a backend engineer for your high-throughput services or an AI engineer to deploy production RAG pipelines, let's connect.
+        </p>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Channels List -->
+          <div class="contact-info-panel">
+            
+            <!-- Email Box -->
+            <div class="contact-card-box" data-copy="sandeep22bcs11548@gmail.com" title="Click to copy email">
+              <div class="contact-card-icon">
+                <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Direct Email (Click to copy)</span>
+                <span class="contact-card-val">sandeep22bcs11548@gmail.com</span>
+              </div>
+              <span class="copy-badge">Copy</span>
+            </div>
+
+            <!-- Phone Box -->
+            <div class="contact-card-box" data-copy="+919027445379" title="Click to copy phone number">
+              <div class="contact-card-icon">
+                <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Direct Call / WhatsApp (Click to copy)</span>
+                <span class="contact-card-val">+91 9027445379</span>
+              </div>
+              <span class="copy-badge">Copy</span>
+            </div>
+
+            <!-- Location Box -->
+            <div class="contact-card-box">
+              <div class="contact-card-icon">
+                <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Current Locations</span>
+                <span class="contact-card-val">Ghaziabad / Bangalore, India</span>
+              </div>
+            </div>
+
+            <!-- Fast Action Links -->
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
+              <a href="https://wa.me/919027445379?text=Hi%20Sandeep,%20saw%20your%20portfolio!" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.88rem;">
+                <i data-lucide="message-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                <span>Chat on WhatsApp</span>
+              </a>
+
+              <a href="mailto:sandeep22bcs11548@gmail.com?subject=Opportunity%20Discussion" class="btn btn-primary" style="font-size: 0.88rem;">
+                <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+                <span>Send Direct Email</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Contact Form Panel -->
+          <div class="contact-form-panel">
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.25rem;">Send a Direct Message</h3>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name or Organization</label>
+                <input id="form-name" class="form-input" type="text" placeholder="e.g. Sarah Jenkins (Google)" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email Address</label>
+                <input id="form-email" class="form-input" type="email" placeholder="sarah@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject / Opportunity</label>
+                <input id="form-subject" class="form-input" type="text" placeholder="Senior Backend / Full-Stack Engineer Role" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message Details</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Tell me about the role, team, or project challenge..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
+                <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+                <span>Send Message</span>
+              </button>
+
+              <div id="form-status-msg" class="form-status-msg"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="content-wrapper">
+        <div class="footer-content">
+          <div class="footer-text">
+            © 2026 <strong>Sandeep</strong>. Engineered with modern Vanilla CSS, GSAP, and Three.js.
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <a href="#hero" class="btn btn-glass" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">
+              <i data-lucide="arrow-up" style="width: 14px; height: 14px;"></i>
+              <span>Back to Top</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Main JavaScript Orchestrator -->
+</body>
+</html>
